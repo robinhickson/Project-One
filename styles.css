@@ -1,0 +1,453 @@
+/* Global Layout Set-up Mobile-first */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background: black;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+/* Link Styles */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(65, 66, 131, 0.7);
+}
+
+.nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-weight: 700;
+    list-style-type: none;
+    margin: 0;
+    background: rgb(247, 246, 243);
+    min-height: 30px;
+    padding: 15px;
+    position: fixed;
+}
+
+.nav a {
+    transition: all .5s;
+}
+
+.nav a:hover {
+    color: rgb(65, 66, 131, 0.2);
+}
+
+
+/* Section Styles */
+
+header {
+    text-align: center;
+    background-size: auto;
+    overflow: hidden;
+    padding-top: 60px;
+    line-height: 2;
+}
+
+.home {
+    background: url('images/rsz_tolstachaolais.png') no-repeat top center;
+    padding: 100px 0 60px 0;
+}
+
+.profile-image {
+    margin-top: 50px;
+    transform: scale(0.8);
+    opacity: 0.6;
+    transition: all 3s;
+}
+
+.profile-image:hover {
+    transform: scale(1.2) rotate(1800deg);
+    opacity: 0.9;
+}
+
+.tag {
+    background-color: rgb(247, 246, 243, 0.3);
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    display: table;
+    margin: 20px auto;
+}
+
+.articlehead {
+    border-style: none;
+    
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    background: black;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+
+/* Image control*/
+
+.myimage {
+    margin-top: 0px;
+}
+
+.heroimages {
+    flex: auto;
+    width: 100%;
+    min-width: 0;
+    align-self: center;
+}
+
+.heroimage {
+    padding: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+
+.heroimagelink:hover {
+    border-bottom: 4px solid rgb(0, 0, 0, 0.2);
+    border-right: 4px solid rgb(0, 0, 0, 0.2);
+    border-color: rgb(0, 0, 0, 0.5);
+}
+
+
+/* cards for articles/sections/lists*/
+
+.card {
+    flex: auto;
+    flex-wrap: wrap;
+    margin: 20px 80px;
+    padding: 20px;
+    max-width: 500px;
+    text-align: center;
+    background-color: rgba(247, 246, 243);
+    border-bottom: 4px solid rgb(0, 0, 0, 0.2);
+    border-right: 4px solid rgb(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.card:hover {
+    border-color: rgb(0, 0, 0, 0.5);
+}
+
+.card ul {
+    padding: 0;
+    text-align: center;
+}
+
+.card li {
+    border-radius: 6px;
+    display: flex;
+    background: rgba(3, 2, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    margin: 2px;
+}
+
+.card li:nth-child(even) {
+    background: black;
+    color: white;
+}
+
+.skills li,
+.dare li {
+    border-radius: 6px;
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    margin: 2px;
+}
+
+.skills li:nth-child(odd),
+.dare li:nth-child(odd) {
+    background: rgba(3, 2, 0, 0.7);
+}
+
+.dare a {
+    transition: all .5s;
+    color: white;
+}
+
+.dare a:hover {
+    color: rgb(247, 246, 243, 0.2);
+}
+
+.darelinks {
+    display: flex;
+    background: rgb(247, 246, 243, 0.3);
+    border-radius: 8px;
+    border: 4px solid rgb(0, 0, 0, 0.5);
+}
+
+.inlinelinkwhite {
+    color: black;
+    font-weight: 700;
+}
+
+.inlinelinkwhite:hover {
+    color: rgb(247, 246, 243, 0.2);
+    transition-duration: 0.5s;
+}
+
+.highlight {
+    color: white;
+}
+
+
+/* Footer styles  */
+
+.github {
+    height: 20px;
+    width: 20px;
+    margin-left: 30px;
+}
+
+.footerlinks ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 0.75em;
+    list-style-type: none;
+    margin: 0;
+    background: rgb(247, 246, 243);
+    min-height: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+.footerlinks li {
+    padding: 15px 10px 10px 10px;
+}
+
+.footerlinks a:hover {
+    color: rgb(65, 66, 131, 0.2);
+    transition: all .5s;
+}
+
+.github:hover {
+    opacity: 0.2;
+    transition: all .5s;
+}
+
+
+/*Mobile first responsive design*/
+
+
+/*Page styles*/
+
+
+
+.gridflex {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background: black;
+    padding: 20px;
+    margin: 20px;
+    flex-wrap: nowrap;
+}
+
+.rowcontainer {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.mainarticle {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: auto;
+    background: rgb(247, 246, 243);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    border-bottom: 4px solid rgb(0, 0, 0, 0.2);
+    border-right: 4px solid rgb(0, 0, 0, 0.2);
+}
+
+.mainarticle:hover {
+    border-color: rgb(0, 0, 0, 0.5);
+}
+
+.sidearticle {
+    display: flex;
+    flex: auto;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    background: rgb(247, 246, 243, 0.8);
+    border-bottom: 4px solid rgb(0, 0, 0, 0.2);
+    border-right: 4px solid rgb(0, 0, 0, 0.2);
+    color: black;
+}
+
+.sidearticle:hover {
+    border-color: rgb(0, 0, 0, 0.5);
+}
+
+
+/*Staggered breakpoints responsive design*/
+
+
+
+
+@media only screen and (min-width:768px) {
+    .flex {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+    }
+    .card {
+        flex: auto;
+        flex-wrap: nowrap;
+        margin: 20px 20px;
+        padding: 20px;
+        text-align: center;
+    }
+    .gridflex {
+        margin-top: 50px;
+    }
+    .rowcontainer {
+        display: flex;
+        flex: auto;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .mainarticle {
+        flex-direction: row;
+        flex: 4;
+        flex-wrap: nowrap;
+    }
+    .sidearticle {
+        flex: 1;
+    }
+    .heroimages {
+        flex: auto;
+        width: 100%;
+        min-width: 0;
+        align-self: center;
+    }
+    .heroimage {
+        display: flex;
+        flex: auto;
+        padding: 10px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+        min-width: 0;
+        align-self: center;
+    }
+    .articlehead {
+        transform: rotate(180deg);
+        border-style: none;
+        
+        font-size: 1.5em;
+        font-weight: 700;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        text-align: center;
+        color: white;
+        background: black;
+        border-radius: 8px;
+        padding: 5px;
+        margin-right: 10px;
+    }
+}
+
+/*Staggered breakpoints responsive design*/
+
+
+
+
+/* @media only screen and (min-width:1200px) {
+    .flex {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+    }
+    .card {
+        flex: auto;
+        flex-wrap: nowrap;
+        margin: 20px 20px;
+        padding: 20px;
+        text-align: center;
+    }
+    .gridflex {
+        margin-top: 50px;
+        flex-direction: row;
+    }
+    .rowcontainer {
+        display: flex;
+        flex: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .mainarticle {
+        flex-direction: row;
+        flex: auto;
+        flex-wrap: wrap;
+    }
+    .sidearticle {
+        flex: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .heroimages {
+        flex: auto;
+        width: 100%;
+        min-width: 0;
+        align-self: center;
+    }
+    .heroimage {
+        display: flex;
+        flex: auto;
+        padding: 10px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+        min-width: 0;
+        align-self: center;
+    }
+    .articlehead {
+        transform: rotate(0deg);
+        border-style: none;
+        font-size: 1.5em;
+        font-weight: 700;
+        writing-mode: horizontal-tb;
+        text-orientation: upright;
+        text-align: center;
+        color: white;
+        background: black;
+        border-radius: 8px;
+        padding: 5px;
+        margin-right: 10px;
+    }
+} */
